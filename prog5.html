@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Two-Column Layouts: Float & Grid</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    section {
+      padding: 20px;
+    }
+
+    /* Float-based layout */
+    .float-container {
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .float-left, .float-right {
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+
+    .float-left {
+      background-color: #e0f7fa;
+    }
+
+    .float-right {
+      background-color: #ffe0b2;
+    }
+
+    /* Grid-based layout */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .grid-item {
+      background-color: #c8e6c9;
+      padding: 20px;
+      border: 1px solid #aaa;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Two-Column Layout Demo</h1>
+    <p>Using Floats and CSS Grid</p>
+  </header>
+
+  <section>
+    <h2>Float-Based Layout</h2>
+    <div class="float-container">
+      <div class="float-left">
+        <h3>Left Column</h3>
+        <p>This column is floated to the left. Floats were traditionally used for layouts before Flexbox and Grid.</p>
+      </div>
+      <div class="float-right">
+        <h3>Right Column</h3>
+        <p>This column is floated to the right. Floats require clearfix or overflow handling to avoid layout issues.</p>
+      </div>
+    </div>
+
+    <h2>Grid-Based Layout</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>Left Column</h3>
+        <p>This layout uses CSS Grid, which is more modern and flexible for responsive designs.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Right Column</h3>
+        <p>Grid makes it easy to control spacing, alignment, and layout structure with minimal effort.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Layout Showcase | Designed by You
+  </footer>
+
+</body>
+</html>
