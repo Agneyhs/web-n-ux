@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout (Floats)</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4; margin: 0; }
+        
+        .container {
+            width: 100%;
+            overflow: hidden; 
+        }
+        
+        .left {
+            float: left;
+            width: 70%; 
+            background-color: #f8f8f8;
+            padding: 20px;
+            margin-right: 20px; 
+        }
+        
+        .right {
+            float: left;
+            width:30%;
+            background-color: #e0e0e0;
+            padding: 20px;
+        }
+    </style>
+    </head>
+</body>
+
+
+    <div class="container">
+    <div class="left">
+            <h2>Left Column</h2>
+            <p>This is the left column. It takes up 70% of the width.</p>
+        </div>
+
+        <div class="right">
+            <h2>Right Column</h2>
+            <p>This is the right column. It takes up 30% of the width.</p>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
