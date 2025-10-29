@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Personal Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: skyblue;
+      text-align: center;
+      padding: 20px;
+      transition: background-color 0.5s;
+    }
+
+    h1 {
+      color: green;
+    }
+
+    img {
+      width: 120px;
+      border-radius: 50%;
+      border: 3px solid green;
+    }
+
+    p {
+      font-size: 16px;
+      color: orange;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: skyblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    button:hover {
+      background-color: deepskyblue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hi, I'm Agney</h1>
+  <img src="https://super.com/120" alt="My Photo">
+  
+  <p>Welcome to my personal web page. I'm a web developer from Bengaluru who loves coding and design.</p>
+  <p>I have been recognized as the best web developer in my company for 3 consecutive years.</p>
+  <p>I have participated in several web development programs organized by different organizations and won prizes.</p>
+  <p>Graduated from RV University, Bengaluru.</p>
+
+  <h2>Hobbies</h2>
+  <p>Playing cricket, cooking, and web development.</p>
+
+  <button onclick="changeColor()">Change Background</button>
+
+  <script>
+    function changeColor() {
+      const colors = ["skyblue", "lightgreen", "lightpink", "lavender", "lightyellow"];
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.backgroundColor = randomColor;
+    }
+  </script>
+
+</body>
+</html>
