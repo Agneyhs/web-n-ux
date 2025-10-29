@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>validation form</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+    }
+    .error {
+      color: rgb(240, 255, 30);
+    }
+    input {
+      margin-bottom: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+
+  <form id="myForm">
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Email:</label>
+    <input type="text" id="email" placeholder="Enter your email">
+
+    <label>Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+
+    <button type="button" onclick="validateForm()">Submit</button>
+  </form>
+
+  <p id="message" class="error"></p>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+      let message = document.getElementById("message");
+
+      message.textContent = "";
+
+      if (name === "" || email === "" || password === "") {
+        message.textContent = "All fields are required!";
+        return;
+      }
+
+      if (!email.includes("@") || !email.includes(".")) {
+        message.textContent = "Please enter a valid email address.";
+        return;
+      }
+
+      if (password.length < 6) {
+        message.textContent = "Password must be at least 6 characters long.";
+        return;
+      }
+
+      message.style.color = "green";
+      message.textContent = "Form submitted successfully!";
+    }
+  </script>
+</body>
+</html>
